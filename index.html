@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>jQuery Timer Plugin</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.timer.js"></script>
+<script type="text/javascript">
+$(function() {
+	var timeout = 1000;
+	var timer;
+	
+	$("input[name=start]").click(function() {
+		$("#console").append("<span style=\"color: #0F0\">Timer started.</span<br />");
+		timer = $.timer(timeout, function() {
+			$("#console").append("Timer completed.<br />");
+		});
+	});
+
+	$("input[name=stop]").click(function() {
+		$("#console").append("<span style=\"color: #F00\">Timer stopped.</span<br />");
+		timer.stop();
+	});
+	
+	$("input[name=reset]").click(function() {
+		timer.stop();
+		timeout = prompt("Reset timeout too:", 500);
+		timer.reset(timeout);
+		$("#console").append("<span style=\"color: #00F\">Timer reset.</span<br />");
+	});
+});
+</script>
+</head>
+
+<body>
+	<h3>jQuery Timer Example</h3>
+	<p>This example shows how the plugin can be used to control a timer. By default, the timer will execute 
+	every second.</p>
+	<input type="button" name="start" value="Start Example"/>
+	<input type="button" name="stop" value="Stop Example"/>
+	<input type="button" name="reset" value="Reset Example"/>
+	
+	<div id="console"></div>
+</body>
+<script type="text/javascript"> 
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script> 
+<script type="text/javascript"> 
+try {
+var pageTracker = _gat._getTracker("UA-6698036-8");
+pageTracker._trackPageview();
+} catch(err) {}</script> 
+</html>
