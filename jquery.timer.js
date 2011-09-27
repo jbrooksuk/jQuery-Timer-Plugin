@@ -1,18 +1,16 @@
 /*
 	jQuery Timer Plugin
-	(www.jbrooksuk.eu)
+	(http://me.itslimetime.com)
 
 	$.timer(interval, callback [, options]);
 	timer.stop();
 	timer.reset();
-
-	Plugin written by James Brooks (www.jbrooksuk.eu) 2010
-	of jTuts.net
 */
 
 (function($) {
 	jQuery.timer = function(interval, callback, options) {
-		var options = jQuery.extend({ reset: 500 }, options); // Create options for the default reset value
+		// Create options for the default reset value
+		var options = jQuery.extend({ reset: 500 }, options);
 		var interval = interval || options.reset;
 
 		if(!callback) { return false; }

@@ -1,8 +1,0 @@
-jQuery Timer Plugin
-By James Brooks (http://www.jbrooksuk.eu)
-
-A simple and effective way to handle JavaScripts setInterval in a jQuery plugin.
-
-The plugin allows you to stop set a variable to the timer object, and control it via .stop and .reset
-
-Time is set in millseconds
