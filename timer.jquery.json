@@ -3,7 +3,7 @@
 	"title": "jQuery Timer",
 	"description": "jQuery plugin for handling timer events.",
 	"keywords": [
-		"timer",
+		"timer"
 	],
 	"version": "1.0.0",
 	"author": {
