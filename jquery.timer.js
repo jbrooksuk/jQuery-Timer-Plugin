@@ -1,6 +1,6 @@
 /*
 	jQuery Timer Plugin
-	(http://me.itslimetime.com)
+	(http://james.brooks.so)
 
 	$.timer(interval, callback [, options]);
 	timer.stop();

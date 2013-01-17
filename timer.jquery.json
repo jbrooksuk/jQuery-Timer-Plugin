@@ -1,0 +1,26 @@
+{
+	"name": "timer",
+	"title": "jQuery Timer",
+	"description": "jQuery plugin for handling timer events.",
+	"keywords": [
+		"timer",
+	],
+	"version": "1.0.0",
+	"author": {
+		"name": "James Brooks",
+		"url": "http://james.brooks.so"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://github.com/jbrooksuk/jQuery-Timer-Plugin/MIT-LICENSE.txt"
+		}
+	],
+	"bugs": "https://github.com/jbrooksuk/jQuery-Timer-Plugin/issues",
+	"homepage": "https://github.com/jbrooksuk/jQuery-Timer-Plugin/",
+	"docs": "https://github.com/jbrooksuk/jQuery-Timer-Plugin/",
+	"download": "https://github.com/jbrooksuk/jQuery-Timer-Plugin/",
+	"dependencies": {
+		"jquery": ">=1.5"
+	}
+}
