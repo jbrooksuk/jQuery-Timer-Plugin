@@ -15,7 +15,7 @@
 
 		if(!callback) { return false; }
 
-		timer = function(interval, callback) {
+		timer = function(interval, callback, disabled) {
 			// Only used by internal code to call the callback
 			this.internalCallback = function() { callback(self); };
 
@@ -31,7 +31,11 @@
 
 			// Set the interval time again
 			this.interval = interval;
-			this.id = setInterval(this.internalCallback, this.interval);
+			
+			// Set the timer, if enabled
+			if (!disabled) {
+				this.id = setInterval(this.internalCallback, this.interval);
+			}
 
 			var self = this;
 		};
