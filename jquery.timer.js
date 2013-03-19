@@ -15,7 +15,7 @@
 
 		if(!callback) { return false; }
 
-		timer = function(interval, callback, disabled) {
+		var Timer = function(interval, callback, disabled) {
 			// Only used by internal code to call the callback
 			this.internalCallback = function() { callback(self); };
 
@@ -41,6 +41,6 @@
 		};
 
 		// Create a new timer object
-		return new timer(interval, callback);
+		return new Timer(interval, callback, options.disabled);
 	};
 })(jQuery);
