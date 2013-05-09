@@ -1,36 +1,41 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE html>
+<html>
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>jQuery Timer Plugin</title>
-<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
-<script type="text/javascript" src="jquery.timer.js"></script>
-<script type="text/javascript">
-$(function() {
-	var timeout = 1000;
-	var timer;
+	<meta charset="utf-8">
+	<title>jQuery Timer Plugin</title>
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	
-	$("input[name=start]").click(function() {
-		$("#console").append("<span style=\"color: #0F0\">Timer started.</span<br />");
-		timer = $.timer(timeout, function() {
-			$("#console").append("Timer completed.<br />");
-		});
-	});
+	<meta name="author" content="James Brooks, @jbrooksuk">
 
-	$("input[name=stop]").click(function() {
-		$("#console").append("<span style=\"color: #F00\">Timer stopped.</span<br />");
-		timer.stop();
-	});
-	
-	$("input[name=reset]").click(function() {
-		timer.stop();
-		timeout = prompt("Reset timeout too:", 500);
-		timer.reset(timeout);
-		$("#console").append("<span style=\"color: #00F\">Timer reset.</span<br />");
-	});
-});
-</script>
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="jquery.timer.js"></script>
+	<script>
+		$(function() {
+			var timeout = 1000;
+			var timer;
+			
+			$("input[name=start]").click(function() {
+				$("#console").append("<span style=\"color: #0F0\">Timer started.</span<br />");
+				timer = $.timer(timeout, function() {
+					$("#console").append("Timer completed.<br />");
+				});
+			});
+
+			$("input[name=stop]").click(function() {
+				$("#console").append("<span style=\"color: #F00\">Timer stopped.</span<br />");
+				timer.stop();
+			});
+			
+			$("input[name=reset]").click(function() {
+				timer.stop();
+				timeout = prompt("Reset timeout too:", 500);
+				timer.reset(timeout);
+				$("#console").append("<span style=\"color: #00F\">Timer reset.</span<br />");
+			});
+		});
+	</script>
 </head>
 
 <body>
