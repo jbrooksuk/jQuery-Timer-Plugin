@@ -20,5 +20,10 @@ In the chance that you need to stop or reset your timer, you can use the followi
 
 The timeout option for `reset` is optional, as it'll use the default internal option `reset`.
 
-## License
+# Contributors
+
+- James Brooks [@jbrooksuk](http://github.com/jbrooksuk) - [http://james.brooks.so](http://james.brooks.so)
+- [@gaboom](http://github.com/gaboom) - [http://gablog.eu/](http://gablog.eu/)
+
+# License
 MIT - [http://jbrooksuk.mit-license.org](http://jbrooksuk.mit-license.org)

@@ -1,11 +1,10 @@
-/*
-	jQuery Timer Plugin
-	(http://james.brooks.so)
-
-	$.timer(interval, callback [, options]);
-	timer.stop();
-	timer.reset();
-*/
+/**
+ * jQuery Timer Plugin (jquery.timer.js)
+ * @version 1.0.1
+ * @author James Brooks <jbrooksuk@me.com>
+ * @website http://james.brooks.so
+ * @license MIT - http://jbrooksuk.mit-license.org
+ */
 
 (function($) {
 	jQuery.timer = function(interval, callback, options) {
