@@ -24,8 +24,21 @@
 			});
 
 			$("input[name=stop]").click(function() {
-				$("#console").append("<span style=\"color: #F00\">Timer stopped.</span<br />");
-				timer.stop();
+				if(timer.stop()) {
+					$("#console").append("<span style=\"color: #F00\">Timer stopped.</span<br />");
+				}
+			});
+
+			$("input[name=pause]").click(function() {
+				if(timer.pause()) {
+					$("#console").append("<span style=\"color: #FF0\">Timer paused.</span<br />");
+				}
+			});
+
+			$("input[name=resume]").click(function() {
+				if(timer.resume()) {
+					$("#console").append("<span style=\"color: #F00\">Timer resumed.</span<br />");
+				}
 			});
 			
 			$("input[name=reset]").click(function() {
@@ -44,9 +57,13 @@
 	every second.</p>
 	<input type="button" name="start" value="Start Example"/>
 	<input type="button" name="stop" value="Stop Example"/>
+	<input type="button" name="pause" value="Pause Example"/>
+	<input type="button" name="resume" value="Resume Example"/>
 	<input type="button" name="reset" value="Reset Example"/>
 	
-	<div id="console"></div>
+	<div id="console">
+		
+	</div>
 </body>
 <script type="text/javascript"> 
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");

@@ -19,13 +19,39 @@
 			this.internalCallback = function() { callback(self); };
 
 			// Clears any timers
-			this.stop = function() { clearInterval(self.id); };
+			this.stop = function() { 
+				if(this.state === 1 && this.id) {
+					clearInterval(self.id); 
+					this.state = 0;
+					return true;
+				}
+				return false;
+			};
 			// Resets timers to a new time
 			this.reset = function(time) {
 				if(self.id) { clearInterval(self.id); }
 				var time = time || options.reset;
-
-				this.id = setInterval(this.internalCallback, time);
+				this.id = setInterval($.proxy(this.internalCallback, this), time);
+				this.state = 1;
+				return true;
+			};
+			// Pause a timer.
+			this.pause = function() {
+				if(self.id && this.state === 1) {
+					clearInterval(this.id);
+					this.state = 2;
+					return true;
+				}
+				return false;
+			};
+			// Resumes a paused timer.
+			this.resume = function() {
+				if(this.state === 2) {
+					this.state = 1;
+					this.id = setInterval($.proxy(this.internalCallback, this), this.interval);
+					return true;
+				}
+				return false;
 			};
 
 			// Set the interval time again
@@ -33,7 +59,8 @@
 			
 			// Set the timer, if enabled
 			if (!disabled) {
-				this.id = setInterval(this.internalCallback, this.interval);
+				this.id = setInterval($.proxy(this.internalCallback, this), this.interval);
+				this.state = 1;
 			}
 
 			var self = this;

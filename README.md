@@ -17,6 +17,8 @@ In the chance that you need to stop or reset your timer, you can use the followi
 
 - `.stop()`
 - `.reset([timeout])`
+- `.pause()`
+- `.resume()`
 
 The timeout option for `reset` is optional, as it'll use the default internal option `reset`.
 

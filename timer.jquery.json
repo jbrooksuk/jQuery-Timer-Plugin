@@ -4,9 +4,9 @@
 	"description": "jQuery plugin for handling timer events.",
 	"keywords": [
 		"timer",
-		"setTimeout"
+		"setInterval"
 	],
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"author": {
 		"name": "James Brooks",
 		"email": "jbrooksuk@me.com",
