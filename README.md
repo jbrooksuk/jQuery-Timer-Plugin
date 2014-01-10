@@ -1,4 +1,4 @@
-# jQuery Timer Plugin
+# jQuery Timer Plugin [![Gittip](http://badgr.co/gittip/jbrooksuk.png)](https://www.gittip.com/jbrooksuk/)
 A simple and effective way of handling JavaScript internals using jQuery. Version 1.0.0
 
 ## Creating a new timer
