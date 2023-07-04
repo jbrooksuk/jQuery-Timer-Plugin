@@ -1,4 +1,4 @@
-# jQuery Timer Plugin [![Gittip](http://badgr.co/gittip/jbrooksuk.png)](https://www.gittip.com/jbrooksuk/)
+# jQuery Timer Plugin
 A simple and effective way of handling JavaScript internals using jQuery. Version 1.0.0
 
 ## Creating a new timer
@@ -24,7 +24,7 @@ The timeout option for `reset` is optional, as it'll use the default internal op
 
 # Contributors
 
-- James Brooks [@jbrooksuk](http://github.com/jbrooksuk) - [http://james.brooks.so](http://james.brooks.so)
+- James Brooks [@jbrooksuk](http://github.com/jbrooksuk) - [http://james.brooks.page](http://james.brooks.page)
 - [@gaboom](http://github.com/gaboom) - [http://gablog.eu/](http://gablog.eu/)
 
 # License
